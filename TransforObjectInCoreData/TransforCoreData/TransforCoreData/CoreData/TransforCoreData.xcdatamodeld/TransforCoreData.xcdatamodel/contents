@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F27" minimumToolsVersion="Automatic">
+    <entity name="Transformer" representedClassName="Transformer" syncable="YES">
+        <attribute name="available" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="color" optional="YES" attributeType="Transformable" valueTransformerName="ColorValueTransformer" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="logo" optional="YES" attributeType="Transformable" valueTransformerName="LogoValueTransformer" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="person" optional="YES" attributeType="Transformable" valueTransformerName="PersonValueTransformer" syncable="YES"/>
+        <attribute name="testId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Transformer" positionX="-63" positionY="-18" width="128" height="150"/>
+    </elements>
+</model>
