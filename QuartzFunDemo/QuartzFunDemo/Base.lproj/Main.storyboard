@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -13,14 +13,80 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="QuartzFunView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3X-T7-cgW">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="HUj-7R-B95"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="lk3-C0-GPc"/>
+                                    <barButtonItem style="plain" id="yhz-0N-ojW">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="iYX-Bb-KGX">
+                                            <rect key="frame" x="10" y="7" width="300" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="Line"/>
+                                                <segment title="Rect"/>
+                                                <segment title="Ellipse"/>
+                                                <segment title="Image"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="changeShape:" destination="BYZ-38-t0r" eventType="valueChanged" id="fw8-IS-mtI"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="hZ4-cj-nWG"/>
+                                </items>
+                            </toolbar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ddI-98-wJy">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="jR5-DC-YJ0"/>
+                                </constraints>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <items>
+                                    <navigationItem id="NmX-37-kIw">
+                                        <nil key="title"/>
+                                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="zMG-u3-zFa">
+                                            <rect key="frame" x="8" y="7" width="304" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="Red"/>
+                                                <segment title="Blue"/>
+                                                <segment title="Green"/>
+                                                <segment title="Yellow"/>
+                                                <segment title="Random"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="changeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="iXN-Uj-q4K"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ddI-98-wJy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9sS-5R-Dlx"/>
+                            <constraint firstItem="v3X-T7-cgW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="B4Q-M0-cot"/>
+                            <constraint firstAttribute="trailing" secondItem="ddI-98-wJy" secondAttribute="trailing" id="G95-fy-Wq7"/>
+                            <constraint firstItem="ddI-98-wJy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="VJm-fy-LMv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="v3X-T7-cgW" secondAttribute="bottom" id="dvy-oN-c3g"/>
+                            <constraint firstAttribute="trailing" secondItem="v3X-T7-cgW" secondAttribute="trailing" id="zIf-34-hZQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorControl" destination="zMG-u3-zFa" id="YbG-U3-xoJ"/>
+                        <outlet property="shapeControl" destination="iYX-Bb-KGX" id="V23-xI-mKA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="198" y="295"/>
         </scene>
     </scenes>
 </document>

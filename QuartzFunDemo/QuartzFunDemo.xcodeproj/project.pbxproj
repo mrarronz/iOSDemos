@@ -15,6 +15,9 @@
 		E24FAA081CFBFBFA002211AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24FAA061CFBFBFA002211AA /* LaunchScreen.storyboard */; };
 		E24FAA131CFBFBFA002211AA /* QuartzFunDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E24FAA121CFBFBFA002211AA /* QuartzFunDemoTests.m */; };
 		E24FAA1E1CFBFBFA002211AA /* QuartzFunDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E24FAA1D1CFBFBFA002211AA /* QuartzFunDemoUITests.m */; };
+		E26E8CE31D01B0AB004EF0F3 /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E8CE21D01B0AB004EF0F3 /* UIColor+Random.m */; };
+		E26E8CE71D01B418004EF0F3 /* QuartzFunView.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E8CE61D01B418004EF0F3 /* QuartzFunView.m */; };
+		E26E8CE91D01C50F004EF0F3 /* xxx.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E26E8CE81D01C50F004EF0F3 /* xxx.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		E24FAA191CFBFBFA002211AA /* QuartzFunDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuartzFunDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24FAA1D1CFBFBFA002211AA /* QuartzFunDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuartzFunDemoUITests.m; sourceTree = "<group>"; };
 		E24FAA1F1CFBFBFA002211AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E26E8CE11D01B0AB004EF0F3 /* UIColor+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Random.h"; path = "Category/UIColor+Random.h"; sourceTree = "<group>"; };
+		E26E8CE21D01B0AB004EF0F3 /* UIColor+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Random.m"; path = "Category/UIColor+Random.m"; sourceTree = "<group>"; };
+		E26E8CE41D01B1C8004EF0F3 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		E26E8CE51D01B418004EF0F3 /* QuartzFunView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzFunView.h; sourceTree = "<group>"; };
+		E26E8CE61D01B418004EF0F3 /* QuartzFunView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuartzFunView.m; sourceTree = "<group>"; };
+		E26E8CE81D01C50F004EF0F3 /* xxx.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = xxx.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +110,15 @@
 		E24FA9F71CFBFBFA002211AA /* QuartzFunDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E26E8CE01D01B08D004EF0F3 /* Category */,
 				E24FA9FB1CFBFBFA002211AA /* AppDelegate.h */,
 				E24FA9FC1CFBFBFA002211AA /* AppDelegate.m */,
 				E24FA9FE1CFBFBFA002211AA /* ViewController.h */,
 				E24FA9FF1CFBFBFA002211AA /* ViewController.m */,
 				E24FA9F81CFBFBFA002211AA /* Supporting Files */,
+				E26E8CE41D01B1C8004EF0F3 /* Constant.h */,
+				E26E8CE51D01B418004EF0F3 /* QuartzFunView.h */,
+				E26E8CE61D01B418004EF0F3 /* QuartzFunView.m */,
 			);
 			path = QuartzFunDemo;
 			sourceTree = "<group>";
@@ -113,6 +126,7 @@
 		E24FA9F81CFBFBFA002211AA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E26E8CE81D01C50F004EF0F3 /* xxx.jpg */,
 				E24FAA011CFBFBFA002211AA /* Main.storyboard */,
 				E24FAA041CFBFBFA002211AA /* Assets.xcassets */,
 				E24FAA061CFBFBFA002211AA /* LaunchScreen.storyboard */,
@@ -138,6 +152,15 @@
 				E24FAA1F1CFBFBFA002211AA /* Info.plist */,
 			);
 			path = QuartzFunDemoUITests;
+			sourceTree = "<group>";
+		};
+		E26E8CE01D01B08D004EF0F3 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E26E8CE11D01B0AB004EF0F3 /* UIColor+Random.h */,
+				E26E8CE21D01B0AB004EF0F3 /* UIColor+Random.m */,
+			);
+			name = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +268,7 @@
 			files = (
 				E24FAA081CFBFBFA002211AA /* LaunchScreen.storyboard in Resources */,
 				E24FAA051CFBFBFA002211AA /* Assets.xcassets in Resources */,
+				E26E8CE91D01C50F004EF0F3 /* xxx.jpg in Resources */,
 				E24FAA031CFBFBFA002211AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +294,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E26E8CE71D01B418004EF0F3 /* QuartzFunView.m in Sources */,
+				E26E8CE31D01B0AB004EF0F3 /* UIColor+Random.m in Sources */,
 				E24FAA001CFBFBFA002211AA /* ViewController.m in Sources */,
 				E24FA9FD1CFBFBFA002211AA /* AppDelegate.m in Sources */,
 				E24FA9FA1CFBFBFA002211AA /* main.m in Sources */,
@@ -496,6 +522,7 @@
 				E24FAA241CFBFBFA002211AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E24FAA251CFBFBFA002211AA /* Build configuration list for PBXNativeTarget "QuartzFunDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +531,7 @@
 				E24FAA271CFBFBFA002211AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E24FAA281CFBFBFA002211AA /* Build configuration list for PBXNativeTarget "QuartzFunDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +540,7 @@
 				E24FAA2A1CFBFBFA002211AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
