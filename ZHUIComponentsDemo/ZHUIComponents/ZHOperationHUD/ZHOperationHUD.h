@@ -15,5 +15,6 @@
 @property (nonatomic, strong) UIColor *labelColor;
 @property (nonatomic, strong) UIFont *labelFont;
 @property (nonatomic, copy) NSString *labelText;
+@property (nonatomic, assign) BOOL isBlur;
 
 @end

@@ -11,8 +11,8 @@
 IB_DESIGNABLE
 @interface ZHButton : UIButton
 
+@property (nonatomic, strong) UIFont *labelFont;
 @property (nonatomic, assign) IBInspectable CGFloat btnRadius;
-@property (nonatomic, strong) IBInspectable UIFont *labelFont;
 @property (nonatomic, strong) IBInspectable UIColor *btnTextColor;
 @property (nonatomic, strong) IBInspectable UIColor *borderColor;
 @property (nonatomic, strong) IBInspectable UIImage *btnImage;

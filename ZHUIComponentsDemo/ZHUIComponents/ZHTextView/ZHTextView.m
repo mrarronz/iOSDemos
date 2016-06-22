@@ -34,6 +34,7 @@
 
 - (void)setup {
     self.font = [UIFont systemFontOfSize:12];
+    self.startPoint = CGPointZero;
     _placeholderColor = [UIColor lightGrayColor];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textDidChange:) name:UITextViewTextDidChangeNotification object:self];
 }
@@ -44,7 +45,7 @@
         NSMutableParagraphStyle *textStyle = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
         textStyle.lineBreakMode = NSLineBreakByWordWrapping|NSLineBreakByTruncatingTail;
         textStyle.alignment = NSTextAlignmentLeft;
-        [_hintString drawAtPoint:CGPointMake(0, 0)
+        [_hintString drawAtPoint:self.startPoint
                   withAttributes:@{NSFontAttributeName:self.font,
                                    NSForegroundColorAttributeName:_placeholderColor,
                                    NSParagraphStyleAttributeName:textStyle}];
@@ -64,6 +65,11 @@
 
 - (void)setPlaceholderColor:(UIColor *)placeholderColor {
     _placeholderColor = placeholderColor;
+    [self setNeedsDisplay];
+}
+
+- (void)setStartPoint:(CGPoint)startPoint {
+    _startPoint = startPoint;
     [self setNeedsDisplay];
 }
 

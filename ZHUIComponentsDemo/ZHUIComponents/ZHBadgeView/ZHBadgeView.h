@@ -8,13 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-IB_DESIGNABLE
 @interface ZHBadgeView : UIView
 
-@property (nonatomic, copy)   IBInspectable NSString *badgeValue;
-@property (nonatomic, strong) IBInspectable UIColor *badgeBkgColor;
-@property (nonatomic, strong) IBInspectable UIColor *badgeTextColor;
-@property (nonatomic, strong) IBInspectable UIFont *badgeTextFont;
-@property (nonatomic, assign) IBInspectable BOOL needWhiteCircle;
+@property (nonatomic, copy)   NSString *badgeValue;
+@property (nonatomic, strong) UIColor *badgeBkgColor;
+@property (nonatomic, strong) UIColor *badgeTextColor;
+@property (nonatomic, strong) UIFont *badgeTextFont;
+@property (nonatomic, assign) BOOL needWhiteCircle;
 
 @end
