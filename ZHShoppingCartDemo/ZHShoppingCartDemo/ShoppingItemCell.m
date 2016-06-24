@@ -16,8 +16,8 @@
     [super awakeFromNib];
     
     // 设置图片
-    CGFloat cornerRadius = self.itemImageView.frame.size.width/2;
-    [self.itemImageView addCornerRadius:cornerRadius];
+//    CGFloat cornerRadius = self.itemImageView.frame.size.width/2;
+    [self.itemImageView addCornerRadius:5];
     self.itemImageView.image = [self.itemImageView.backgroundColor colorToImage];
     
     // 设置button

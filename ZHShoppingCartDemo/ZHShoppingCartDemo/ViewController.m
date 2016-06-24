@@ -76,7 +76,7 @@ static NSString *const reuseIdentifier = @"ShoppingItemCell";
         _imageLayer.contents = (id)imageView.layer.contents;
         _imageLayer.contentsGravity = kCAGravityResizeAspectFill;
         _imageLayer.bounds = rect;
-        _imageLayer.cornerRadius = rect.size.height/2;
+        _imageLayer.cornerRadius = 5;
         _imageLayer.masksToBounds = YES;
         // 设置初始位置
         _imageLayer.position = CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect));
@@ -106,6 +106,13 @@ static NSString *const reuseIdentifier = @"ShoppingItemCell";
     keyframeAnim.rotationMode = kCAAnimationRotateAuto;
     keyframeAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     
+    // 设置旋转动画
+    CABasicAnimation *rotateAnim = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    rotateAnim.toValue = @(M_PI * 2);
+    rotateAnim.duration = 0.4;
+    rotateAnim.cumulative = YES;
+    rotateAnim.repeatCount = CGFLOAT_MAX;
+    
     // 设置缩放动画
     CABasicAnimation *scaleAnim = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
     scaleAnim.fromValue = @(1.0);
@@ -114,7 +121,7 @@ static NSString *const reuseIdentifier = @"ShoppingItemCell";
     scaleAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     
     CAAnimationGroup *group = [CAAnimationGroup animation];
-    group.animations = @[keyframeAnim, scaleAnim];
+    group.animations = @[keyframeAnim, rotateAnim, scaleAnim];
     group.duration = 0.8;
     group.removedOnCompletion = NO;
     group.fillMode = kCAFillModeForwards;
