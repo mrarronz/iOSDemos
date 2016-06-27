@@ -36,7 +36,7 @@
 @property (nonatomic, strong) UIImage *alertImage;
 
 /**
- *  主体颜色，设置这个值来更改标题栏和button的颜色
+ *  主题颜色，设置这个值来更改标题栏和button的颜色
  */
 @property (nonatomic, strong) UIColor *themeColor;
 
